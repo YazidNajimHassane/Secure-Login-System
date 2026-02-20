@@ -1,19 +1,23 @@
-# Virtual environment
+
 venv/
 env/
 
-# Python cache
 __pycache__/
 *.pyc
 
-# Database
 *.db
+instance/
 
-# Environment variables
 .env
 
-# VS Code
+*.log
+
+*.css.map
+
+node_modules/
+
+uploads/
+
 .vscode/
 
-# Mac
 .DS_Store

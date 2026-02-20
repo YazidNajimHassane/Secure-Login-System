@@ -1,1 +1,2 @@
-A secure password manager built with Flask , featuring hashed master authentication ans AES-encrypted credential storage.   
+# Secure-Login-System
+Create a Secure Login System with Flask and SQL Alchemy

@@ -1,12 +1,12 @@
 {%extends  'base.html'%}
 
 {%block body%}
-    <div class="container">
+    <div  class="container">
         <h1>Welcome</h1>
-        <form id="auth-form" action="{{url_for('login')}}" method="post">
+        <form id="auth_form" action="{{url_for('login')}}">
             <input 
                 type="text"
-                name="Username"
+                name="username"
                 placeholder="username"
                 class="input-filed"
             />
@@ -16,9 +16,25 @@
                 placeholder="password"
                 class="input-filed"
             />
-            <input type="submit" value="Login" class="btn btn-login">
-            <input type="button" value="Register" class="btn btn-login">
+            <input type="submit" value="login" class="btn btn-login" onclick="setActionform('login')">
+            <input type="button" value="register" class="btn btn-register" onclick="setActionform('register')">
 
         </form>
+
     </div>
+    <script>
+        function setActionform(action){
+            let form=document.getElementById("auth_form")
+            if(action==='login'){
+                form.action="{{url_for('login')}}";
+                form.method="post";
+                form.submit();
+            }else if(action==='register'){
+                form.action="{{url_for('register')}}";
+                form.method="post";
+                form.submit();
+            }
+
+        }
+    </script>
 {%endblock%}

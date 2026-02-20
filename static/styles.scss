@@ -1,0 +1,99 @@
+$primary_color:#007bff;
+$primary_hover_color:#0056b3;
+$secondary_color:#28a745;
+$secondary_hover_color:#218838;
+$background_color:wheat;
+$container_bg_color:#f0f8ff;
+$text_color:#333;
+$subtex_color: #666;
+$bg_color:wheat;
+
+
+//styling 
+body{
+    background-color: $background_color ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: $text_color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+header{
+    width: 100%;
+    background-color: $container_bg_color;
+    box-shadow: 0 4px 8px  rgba($color: #01161a, $alpha: 1.0);
+    padding: 20px 0;
+    h1{
+        margin: 0;
+        font-size: 2.5rem;
+        color: $text_color;
+    }
+}
+.container{
+    background-color: $container_bg_color;
+    border-radius: 8px;
+    box-shadow: 0  4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    margin: 50px auto;
+
+    h1{
+        font-size: 2.5rem;
+        color: $text_color;
+        margin-bottom: 1.5rem;
+    }
+    p{
+        font-size: 18px;
+        color: $text_color;
+        margin-bottom: 1.25rem;
+    }
+    .input-filed{
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #333;
+        border-radius: 4px;
+        font-size: 1.5rem;
+        box-sizing: border-box;
+        &:focus{
+            border-color: $primary_color;
+            outline: none;
+        }
+    }
+    .btn{
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background_color 0.3s ;
+
+        &.btn-login{
+            background-color: $primary_color;
+            color: #fff;
+            &:hover{
+                background-color: $primary_hover_color;
+                }
+        }
+        &.btn-register{
+            background-color :$secondary_color;
+            color: #fff;
+            &:hover{
+                background-color: $secondary_hover_color;
+            }
+        }
+        &.btn-logout{
+            background-color:  $secondary_color;
+            color: #fff;
+            &:hover{
+                background-color: $secondary_hover_color;
+            }
+        }
+    }
+}
